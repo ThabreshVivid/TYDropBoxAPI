@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="71R-TE-WeU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--TYDropBox-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytL-Yy-Mp9">
+                                <rect key="frame" x="32" y="518" width="256" height="36"/>
+                                <color key="backgroundColor" red="0.094725196920000004" green="0.46441673979999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1KJ-zJ-054"/>
+                                    <constraint firstAttribute="width" constant="256" id="nGq-LX-pnN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Login with DropBox">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ClickOnDropBoxLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9de-Tw-2NZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oiz-Rh-VGi">
+                                <rect key="frame" x="32" y="265" width="256" height="38"/>
+                                <color key="backgroundColor" red="0.094725196920000004" green="0.46441673979999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="91d-vs-Yrf"/>
+                                    <constraint firstAttribute="width" constant="256" id="tCh-c1-JJn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Show Folder &amp; Files">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GPX-OA-bVK" kind="show" id="c5o-aZ-FME"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ytL-Yy-Mp9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="40J-C2-nHF"/>
+                            <constraint firstAttribute="trailing" secondItem="ytL-Yy-Mp9" secondAttribute="trailing" constant="32" id="9XL-Fm-SLn"/>
+                            <constraint firstItem="Oiz-Rh-VGi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QRp-Bu-aDD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ytL-Yy-Mp9" secondAttribute="bottom" constant="14" id="eNw-lu-QgV"/>
+                            <constraint firstItem="Oiz-Rh-VGi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qNs-i3-nkO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TYDropBox" id="YWF-MI-O8J"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btnFolderfile" destination="Oiz-Rh-VGi" id="5s6-vu-TfR"/>
+                        <outlet property="btnLogin" destination="ytL-Yy-Mp9" id="L3h-66-WUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+        <!--Folders & Files-->
+        <scene sceneID="Cfz-Sf-dyd">
+            <objects>
+                <viewController storyboardIdentifier="FolderWithFiles" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GPX-OA-bVK" customClass="FolderWithFiles" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2QR-fC-ei8"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ej-bD-oxE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J0A-yb-CAy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cto-xO-nwL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GPX-OA-bVK" id="Iqz-6c-x6I"/>
+                                    <outlet property="delegate" destination="GPX-OA-bVK" id="dpM-nO-eMA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cto-xO-nwL" firstAttribute="top" secondItem="2QR-fC-ei8" secondAttribute="bottom" constant="-64" id="2JW-BT-TOa"/>
+                            <constraint firstItem="7ej-bD-oxE" firstAttribute="top" secondItem="Cto-xO-nwL" secondAttribute="bottom" id="SoT-Oq-Yfr"/>
+                            <constraint firstItem="Cto-xO-nwL" firstAttribute="leading" secondItem="J0A-yb-CAy" secondAttribute="leading" id="sV3-Ms-04I"/>
+                            <constraint firstAttribute="trailing" secondItem="Cto-xO-nwL" secondAttribute="trailing" id="thW-jq-skH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Folders &amp; Files" id="Hgn-uC-HBt"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="folderTbl" destination="Cto-xO-nwL" id="6aj-8a-qE6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoT-TD-gyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oqM-BU-6sZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="71R-TE-WeU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ejl-Kd-gG6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.094725196917930132" green="0.46441673984030163" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9nH-wO-O3J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRE-Tk-tUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="339"/>
+        </scene>
+    </scenes>
+</document>

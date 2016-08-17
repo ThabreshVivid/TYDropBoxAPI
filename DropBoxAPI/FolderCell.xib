@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FolderCell" rowHeight="58" id="KGk-i7-Jjw" customClass="FolderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Folder-48" translatesAutoresizingMaskIntoConstraints="NO" id="dtm-ET-YcQ">
+                        <rect key="frame" x="6" y="5" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="DXA-fl-Vv8"/>
+                            <constraint firstAttribute="width" constant="48" id="sFn-1h-z5X"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="us8-rE-Ov1">
+                        <rect key="frame" x="62" y="7" width="250" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0qC-lC-wiY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-F7-aHl">
+                        <rect key="frame" x="62" y="31" width="250" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nRo-F7-aHl" firstAttribute="top" secondItem="us8-rE-Ov1" secondAttribute="bottom" constant="3" id="3dn-AO-rNa"/>
+                    <constraint firstAttribute="bottom" secondItem="nRo-F7-aHl" secondAttribute="bottom" constant="5" id="DD9-rY-VH3"/>
+                    <constraint firstItem="nRo-F7-aHl" firstAttribute="leading" secondItem="dtm-ET-YcQ" secondAttribute="trailing" constant="8" id="Dgi-45-t2m"/>
+                    <constraint firstAttribute="trailing" secondItem="us8-rE-Ov1" secondAttribute="trailing" constant="8" id="ZCs-4R-udQ"/>
+                    <constraint firstItem="us8-rE-Ov1" firstAttribute="leading" secondItem="dtm-ET-YcQ" secondAttribute="trailing" constant="8" id="i3G-ug-Bpr"/>
+                    <constraint firstAttribute="trailing" secondItem="nRo-F7-aHl" secondAttribute="trailing" constant="8" id="p4Y-b8-bH8"/>
+                    <constraint firstItem="us8-rE-Ov1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="q3Y-DB-JOU"/>
+                    <constraint firstItem="dtm-ET-YcQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="vJf-zz-R37"/>
+                    <constraint firstItem="dtm-ET-YcQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="wFr-JK-tPI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconic" destination="dtm-ET-YcQ" id="QQ4-EE-buv"/>
+                <outlet property="txtDate" destination="nRo-F7-aHl" id="0fL-d6-5dc"/>
+                <outlet property="txtTitle" destination="us8-rE-Ov1" id="kWM-4a-LF8"/>
+            </connections>
+            <point key="canvasLocation" x="306" y="364"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Folder-48" width="48" height="48"/>
+    </resources>
+</document>
